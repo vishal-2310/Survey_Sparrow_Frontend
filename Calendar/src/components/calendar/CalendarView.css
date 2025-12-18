@@ -1,0 +1,135 @@
+/* =========================
+   CALENDAR ANIMATIONS
+========================= */
+.calendar-grid-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+  position: relative;
+}
+
+/* Create a wrapper for the sliding content */
+.calendar-grid-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Slide animation for month navigation */
+.calendar-grid-container.slide-left .calendar-grid,
+.calendar-grid-container.slide-right .calendar-grid {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.calendar-grid-container.slide-left .calendar-grid {
+  animation-name: slideOutRight;
+}
+
+.calendar-grid-container.slide-right .calendar-grid {
+  animation-name: slideOutLeft;
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* New grid entering animations */
+.calendar-grid-container.slide-left::after,
+.calendar-grid-container.slide-right::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  background: white;
+  border-radius: 12px;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0.15s;
+}
+
+.calendar-grid-container.slide-left::after {
+  animation-name: slideInLeft;
+}
+
+.calendar-grid-container.slide-right::after {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Button click animation */
+.nav-buttons button:active {
+  transform: scale(0.95) !important;
+  transition: transform 0.1s ease !important;
+}
+
+/* Month/year title animation */
+.month-year-title {
+  position: relative;
+  overflow: hidden;
+}
+
+.month-year-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.month-year-title:hover::after {
+  transform: scaleX(1);
+}

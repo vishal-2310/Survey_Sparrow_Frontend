@@ -1,0 +1,111 @@
+/* =========================
+   CALENDAR GRID CONTAINER
+========================= */
+.calendar-grid-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto repeat(6, 1fr);
+  gap: 2px;
+  height: 100%;
+  max-height: calc(100vh - 200px);
+  overflow: hidden;
+  position: relative;
+}
+
+/* DAY NAME */
+.day-name {
+  text-align: center;
+  font-weight: 600;
+  padding: 16px 0;
+  color: #374151;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* DAY CELL */
+.day-cell {
+  background: white;
+  border: 1px solid #f3f4f6;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.2s;
+  position: relative;
+  min-height: 100px; /* Fixed height for consistency */
+}
+
+.day-cell:hover {
+  background: #f9fafb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+.day-cell.today {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
+  border-color: rgba(79, 70, 229, 0.3);
+}
+
+/* DATE NUMBER */
+.date-number {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.today-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: #4f46e5;
+  background: rgba(79, 70, 229, 0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* EVENT */
+.event {
+  background: linear-gradient(135deg, #eef2ff 0%, #f0f9ff 100%);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #1e40af;
+  border-left: 3px solid #4f46e5;
+  transition: all 0.2s;
+}
+
+.event:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 13px;
+}
+
+.holiday-event {
+  background: linear-gradient(135deg, #fef3c7 0%, #fef9c3 100%);
+  border-left-color: #f59e0b;
+  color: #92400e;
+}

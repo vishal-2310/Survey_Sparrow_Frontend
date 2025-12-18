@@ -1,0 +1,99 @@
+/* =========================
+   LIST VIEWS
+========================= */
+.list-view {
+  overflow-y: auto;
+  padding-right: 8px;
+  height: 100%;
+}
+
+.list-view::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list-view::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.list-view::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.list-view::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.list-view h2 {
+  color: #111827;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.list-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+  border-left: 6px solid #4f46e5;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.list-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.list-card.holiday {
+  border-left-color: #f59e0b;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+.list-card h4 {
+  margin: 0 0 8px 0;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.list-card p {
+  margin: 4px 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.list-card .event-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.list-card span {
+  font-size: 13px;
+  color: #9ca3af;
+  font-weight: 500;
+  display: block;
+  margin-top: 4px;
+}
+
+.event-type-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #f3f4f6;
+  color: #374151;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

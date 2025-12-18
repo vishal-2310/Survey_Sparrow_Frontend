@@ -1,0 +1,94 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Kickoff Meeting",
+      "date": "2025-12-17",
+      "time": "All Day",
+      "type": "holiday",
+      "color": "#f59e0b",
+      "description": "Annual company kickoff meeting"
+    },
+    {
+      "id": 2,
+      "title": "Project Overview",
+      "date": "2024-01-02",
+      "time": "1:00 - 1:30 PM",
+      "type": "meeting",
+      "color": "#4f46e5",
+      "description": "Quarterly project review meeting"
+    },
+    {
+      "id": 3,
+      "title": "Lunch with Team",
+      "date": "2024-01-02",
+      "time": "3:00 - 4:00 PM",
+      "type": "social",
+      "color": "#10b981",
+      "description": "Team building lunch"
+    },
+    {
+      "id": 4,
+      "title": "Safety Review",
+      "date": "2024-01-03",
+      "time": "11:00 - 11:30 AM",
+      "type": "meeting",
+      "color": "#4f46e5",
+      "description": "Monthly safety compliance review"
+    },
+    {
+      "id": 5,
+      "title": "Client Presentation",
+      "date": "2024-01-05",
+      "time": "2:00 - 3:00 PM",
+      "type": "meeting",
+      "color": "#4f46e5",
+      "description": "Quarterly client presentation"
+    },
+    {
+      "id": 6,
+      "title": "New Year's Day",
+      "date": "2024-01-01",
+      "time": "All Day",
+      "type": "holiday",
+      "color": "#f59e0b",
+      "description": "Public holiday"
+    },
+    {
+      "id": 7,
+      "title": "Team Workshop",
+      "date": "2024-01-08",
+      "time": "9:00 AM - 12:00 PM",
+      "type": "workshop",
+      "color": "#8b5cf6",
+      "description": "Agile methodology workshop"
+    },
+    {
+      "id": 8,
+      "title": "Budget Planning",
+      "date": "2024-01-10",
+      "time": "10:00 - 11:30 AM",
+      "type": "meeting",
+      "color": "#4f46e5",
+      "description": "Annual budget planning session"
+    },
+    {
+      "id": 9,
+      "title": "Martin Luther King Jr. Day",
+      "date": "2024-01-15",
+      "time": "All Day",
+      "type": "holiday",
+      "color": "#f59e0b",
+      "description": "Federal holiday"
+    },
+    {
+      "id": 10,
+      "title": "Product Launch",
+      "date": "2024-01-20",
+      "time": "All Day",
+      "type": "event",
+      "color": "#ec4899",
+      "description": "New product launch event"
+    }
+  ]
+}
